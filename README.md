@@ -1,16 +1,21 @@
-Python Robotics Simulator
+Research Track 1 - Assignment 1
 ================================
 
-This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
-Some of the arenas and the exercises have been modified for the Research Track I course
+Introduction
+------------
+
+In this assignment the robot has to move the silver boxes near the golden ones and at the end silver and golden boxes has to be distributed in pairs
 
 Installing and running
 ----------------------
 
 The simulator requires a Python 2.7 installation, the [pygame](http://pygame.org/) library, [PyPyBox2D](https://pypi.python.org/pypi/pypybox2d/2.1-r331), and [PyYAML](https://pypi.python.org/pypi/PyYAML/).
 
-Once the dependencies are installed, simply run the `test.py` script to test out the simulator.
+Once the dependencies are installed, simply run the assignment, using `run.py` with the file name `assignment.py`, script to test out the simulator.
 
+```python
+$ python run.py assignment.py
+```
 
 Robot API
 ---------
@@ -75,3 +80,18 @@ for m in markers:
 ```
 
 [sr-api]: https://studentrobotics.org/docs/programming/sr/
+
+Code
+----
+
+The robot starts to look for silver tokens, he can see how far it is and choose how fast drive if is alligned, otherwise he turn.
+
+
+
+
+
+Improvements
+------------
+
+One possible improvement is to use the token code to identify which tokens have been already moved.
+
