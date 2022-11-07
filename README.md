@@ -84,14 +84,23 @@ for m in markers:
 Code
 ----
 
-The robot starts to look for silver tokens, he can see how far it is and choose how fast drive if is alligned, otherwise he turn.
+The robot starts looking for `silver tokens`, he can see how far it is and choose how fast drive if is `alligned`, otherwise he `turn`.
+The robot always looks for tokens inside a set distance `d1`, in this way it is looking for the nearest one.
+When it is close enough it `Grab` the silver token, `turn` its position of 90 degrees and start looking for `golden tokens` with the same silver token's rules. 
+When the robot reachs the releasing distance `r_th`, it `Release` the silver token near the golden one, it `drive back` in the middle of the map and `turn` its position of 90 degrees and start looking for `silver tokens` again. In this way it works in a clockwise direction.
+I add a `counter` that increments its value for each `Release` and the robot code is inside a `while loop` that works until the counter reach the value of 6, due to the fact that it has 6 silver tokens to move.
 
-
-
-
+```python
+while (counter < 6):
+       .
+       .
+       .
+```
 
 Improvements
 ------------
-
 One possible improvement is to use the token code to identify which tokens have been already moved.
 
+Overflow
+---------
+[overflow.pdf](https://github.com/boez98/RT1_assignment_1/files/9951752/overflow.pdf)
